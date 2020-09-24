@@ -14,7 +14,7 @@
             "type": "string"
           },
           "host": {
-            "title": "Hostname or IP",
+            "title": "IP Address",
             "type": "string"
           },
           "interval": {
