@@ -1,24 +1,43 @@
 {
-	"name": "@vectronic/homebridge-ping-hosts",
-	"displayName": "Homebridge Ping Hosts",
-	"version": "3.2.6",
-	"description": "Ping state sensor plugin for homebridge (https://github.com/nfarina/homebridge)",
-	"license": "ISC",
-	"keywords": [
-		"homebridge-plugin"
-	],
-	"engines": {
-		"homebridge": ">=1.1.0"
-	},
-	"author": {
-		"name": "vectronic"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git@github.com:vectronic/homebridge-ping-hosts.git"
-	},
-	"dependencies": {
-		"ping": "0.4.2",
-		"@network-utils/arp-lookup": "2.0.1"
-	}
+  "name": "@vectronic/homebridge-ping-hosts",
+  "displayName": "Homebridge Ping Hosts",
+  "type": "module",
+  "version": "4.0.0",
+  "description": "Ping state sensor plugin for homebridge",
+  "license": "ISC",
+  "keywords": [
+    "homebridge-plugin"
+  ],
+  "main": "dist/index.js",
+  "engines": {
+    "node": "^20.18.0 || ^22.10.0 || ^24.0.0",
+    "homebridge": "^1.8.0 || ^2.0.0-beta.0"
+  },
+  "author": {
+    "name": "vectronic"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vectronic/homebridge-ping-hosts.git"
+  },
+  "scripts": {
+    "build": "rimraf ./dist && tsc",
+    "lint": "eslint . --max-warnings=0",
+    "prepublishOnly": "npm run lint && npm run build",
+    "watch": "npm run build && npm link && nodemon"
+  },
+  "dependencies": {
+    "ping": "^0.4.4",
+    "@network-utils/arp-lookup": "^2.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "@types/node": "^22.10.0",
+    "eslint": "^9.18.0",
+    "homebridge": "^2.0.0-beta.0",
+    "nodemon": "^3.1.9",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.7.0",
+    "typescript-eslint": "^8.20.0"
+  }
 }

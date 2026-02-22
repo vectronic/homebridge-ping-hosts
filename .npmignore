@@ -1,0 +1,14 @@
+src
+.github
+.claude
+eslint.config.js
+tsconfig.json
+nodemon.json
+.vscode
+*.log
+node_modules/
+*.tsbuildinfo
+.npm
+.eslintcache
+*.tgz
+test/

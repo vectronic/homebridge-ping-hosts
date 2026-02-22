@@ -1,7 +1,7 @@
 {
   "pluginAlias": "PingHosts",
   "pluginType": "platform",
-  "singular": false,
+  "singular": true,
   "schema": {
     "hosts": {
       "title": "Hosts",
